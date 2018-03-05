@@ -8,12 +8,13 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		int cantCursos = 3;
-		int cantBloques = 6; // bloques por dÌa
-		int cantMaterias = 5; // redundante? si ya tengo cantBloqueMateria puedo usar .length de esa variable
+		int cantBloques = 6; // bloques por d√≠a
+		
 		int cantBloqueMateria[] = { 3, 6, 3, 3, 3 }; // cantidad de bloques asignado a cada materia
 		// por ahora se toma numeros que puedan dividirse para la cantidad de cursos
-
-		Materia materias[] = new Materia[4]; //no deberÌa ser 5? usamos cantMaterias ac·
+		int cantMaterias = cantBloqueMateria.length; // redundante? si ya tengo cantBloqueMateria puedo usar .length de esa variable
+		
+		Materia materias[] = new Materia[cantBloqueMateria.length]; //no deber√≠a ser 5? usamos cantMaterias ac√°
 		materias[0] = new Materia("A");
 		materias[1] = new Materia("B");
 		materias[2] = new Materia("C");
@@ -22,10 +23,10 @@ public class Test {
 
 		int cantBloqueMateriaPorCurso[] = calcularCantBloqueMateriaPorCurso(cantBloqueMateria, cantCursos);
 		// cantidad de bloques asignado a cada materia por curso
-		System.out.println(cantBloqueMateriaPorCurso); //quiero ver quÈ pasa con esto
+		System.out.println(cantBloqueMateriaPorCurso); //quiero ver qu√© pasa con esto
 		
-		Grilla grilla[][] = new Grilla[cantBloques][cantCursos]; // esto est· muy bien
-		grilla = inicializarGrilla(); //estarÌa bueno que este mÈtodo sea de la clase Grilla
+		Grilla grilla[][] = new Grilla[cantBloques][cantCursos]; // esto est√° muy bien
+		grilla = inicializarGrilla(); //estar√≠a bueno que este m√©todo sea de la clase Grilla
 
 		// Todavia no se contemplan los profesores
 
