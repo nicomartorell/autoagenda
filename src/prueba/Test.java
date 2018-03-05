@@ -9,12 +9,12 @@ public class Test {
 
 		int cantCursos = 3;
 		int cantBloques = 6; // bloques por día
-		
+		int cantMaterias = cantBloqueMateria.length;
 		int cantBloqueMateria[] = { 3, 6, 3, 3, 3 }; // cantidad de bloques asignado a cada materia
 		// por ahora se toma numeros que puedan dividirse para la cantidad de cursos
 		int cantMaterias = cantBloqueMateria.length; // redundante? si ya tengo cantBloqueMateria puedo usar .length de esa variable
 		
-		Materia materias[] = new Materia[cantBloqueMateria.length]; //no debería ser 5? usamos cantMaterias acá
+		Materia materias[] = new Materia[cantMaterias]; //no debería ser 5? usamos cantMaterias acá
 		materias[0] = new Materia("A");
 		materias[1] = new Materia("B");
 		materias[2] = new Materia("C");
@@ -23,7 +23,7 @@ public class Test {
 
 		int cantBloqueMateriaPorCurso[] = calcularCantBloqueMateriaPorCurso(cantBloqueMateria, cantCursos);
 		// cantidad de bloques asignado a cada materia por curso
-		System.out.println(cantBloqueMateriaPorCurso); //quiero ver qué pasa con esto
+		// aca el array quedaria = { 1, 2, 1, 1 ,1};
 		
 		Grilla grilla[][] = new Grilla[cantBloques][cantCursos]; // esto está muy bien
 		grilla = inicializarGrilla(); //estaría bueno que este método sea de la clase Grilla
