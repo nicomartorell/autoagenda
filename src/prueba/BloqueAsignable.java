@@ -1,10 +1,10 @@
 package prueba;
 
-public class BloqueAsignable { //información de cada espacio de la matriz
+public class BloqueAsignable { //informaciÃ³n de cada espacio de la matriz
 	
 	private Profesor p; //profesor que da estas horas
 	private Curso c; // curso en el que las da
-	private Materia m;
+	private Materia m; // materia que corresponde a esta hora
 	private int bloques; // cantidad de horas que da
 	
 	public BloqueAsignable(Profesor p, Curso c, Materia m, int bloques) {
