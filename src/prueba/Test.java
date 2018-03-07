@@ -14,6 +14,12 @@ public class Test {
 		// por ahora se toma numeros que puedan dividirse para la cantidad de cursos
 		int cantMaterias = cantBloqueMateria.length; // redundante? si ya tengo cantBloqueMateria puedo usar .length de esa variable
 		
+		ArrayList<BloqueAsignable> datos = new ArrayList<BloqueAsignable>();
+		datos = crearBloquesAsignables("Pedrito", "A", "Matematica", "2");
+		
+		Escuela escuela = new Escuela(datos);
+		escuela.calcular(datos.get(0));
+		
 		Materia materias[] = new Materia[cantMaterias]; //no debería ser 5? usamos cantMaterias acá
 		materias[0] = new Materia("A");
 		materias[1] = new Materia("B");
@@ -85,5 +91,8 @@ public class Test {
 		}
 		return suma;
 	}
-
+	
+	private ArrayList<BloqueAsignable> crearBloquesAsignables (Profesor p, Curso c, Materia m, int cantiBloque);
+	BloqueAsignable bloque = new BloqueAsignable (p, c, m, cantiBloque);
+	datos.add(bloque);
 }
