@@ -12,17 +12,17 @@ public class Escuela {
 		this.datos = datos; 	//obviamente falta llenar esta matriz, pasar algunas cosas que están en la clase
 	}				// Test para acá, pero bueno, esto al menos da una idea de cómo sería esta clase
 	
-	public void calcular(BloqueAsignable data) {
-		if(data.equals(matriz.get(matriz.size()-1))) {
+	public void calcular(BloqueAsignable bloqueA) {
+		if(bloqueA == null) { // caso base
 			//contarPuntos();
 			//guardarAgenda();
 			return;
 		}
 		
-		for(Bloque b: data.getC().bloques) {
+		for(Bloque b: bloqueA.getC().bloques) {
 			if(b.estaDisponible()) {
-				b.asignar(data);
-				calcular(siguiente(data));
+				b.asignar(bloqueA); //quizás se puede mandar menos info
+				calcular(siguiente(bloqueA)); // caso recursivo
 			}
 		}
 		
@@ -30,7 +30,7 @@ public class Escuela {
 	}
 	
 	public BloqueAsignable siguiente(BloqueAsignable b) {
-		return matriz.get(matriz.indexOf(b) + 1);
+		return datos.get(datos.indexOf(b) + 1);
 	}
 	
 }
