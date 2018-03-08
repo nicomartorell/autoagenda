@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Materia {
 	
 	private String nombre;
-	private ArrayList<Profesor> profesor;
 	private int duracion;
 	
-	public Materia (String nombre) {
+	public Materia (String nombre, int duracion) {
 		this.nombre = nombre;
+		this.duracion = duracion;
 	}
 
 	public String getNombre() {
@@ -20,21 +20,8 @@ public class Materia {
 		this.nombre = nombre;
 	}
 
-	public ArrayList<Profesor> getProfesor() {
-		return profesor;
-	}
-
-	public void setProfesor(ArrayList<Profesor> profesor) {
-		this.profesor = profesor;
-	}
-
 	public int getDuracion() {
 		return duracion;
-	}
-
-	@Override
-	public String toString() {
-		return "Materia [nombre=" + nombre + ", profesor=" + profesor + ", duracion=" + duracion + "]";
 	}
 
 	public void setDuracion(int duracion) {
