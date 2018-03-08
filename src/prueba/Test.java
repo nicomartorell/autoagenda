@@ -6,7 +6,14 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		/*
+		* El problema acá es que estamos pasandole a BloqueAsignable un montón de Strings cuando en realidad
+		* toma como parámetros objetos (Profesor, Curso, Materia y un int)
+		* En todo caso antes de crear esta lista, habría que crear una lista de profesores, otra de cursos,
+		* Otra de materias y ahi si armar esto.
+		*/
+		
 		ArrayList<BloqueAsignable> datos = new ArrayList<BloqueAsignable>();
 		datos.add(new BloqueAsignable("Pedrito", "A", "Matematica", "2"));
 		datos.add(new BloqueAsignable("Claudia", "A", "Fisica", "2"));
