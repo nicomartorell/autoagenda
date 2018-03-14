@@ -1,6 +1,7 @@
 package prueba;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Test {
 
