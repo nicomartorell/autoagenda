@@ -31,7 +31,10 @@ public class Test {
 		cursos.put("C", new Curso("C", 6));
 		
 		HashMap<String, Materia> materias = new HashMap<>();
+
 		materias.put("Matematica", new Materia("Matematica"));
+
+		materias.put("Matemática", new Materia("Matemática"));
 		materias.put("Lengua", new Materia("Lengua"));
 		materias.put("Biologia", new Materia("Biologia"));
 		
