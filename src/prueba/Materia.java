@@ -7,9 +7,8 @@ public class Materia {
 	private String nombre;
 	private int duracion;
 	
-	public Materia (String nombre, int duracion) {
+	public Materia (String nombre) {
 		this.nombre = nombre;
-		this.duracion = duracion;
 	}
 
 	public String getNombre() {
@@ -18,14 +17,6 @@ public class Materia {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public int getDuracion() {
-		return duracion;
-	}
-
-	public void setDuracion(int duracion) {
-		this.duracion = duracion;
 	}
 
 }
