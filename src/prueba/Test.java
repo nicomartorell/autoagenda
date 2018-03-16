@@ -1,6 +1,7 @@
 package prueba;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Test {
 
@@ -19,20 +20,20 @@ public class Test {
 		// Eso es porque usualmente queremos ir a agarrar un profesor o un curso según su nombre, no
 		// queremos ir pasando uno por uno (eso es lo que vamos a hacer con los bloques asignables)
 		
-		HashMap<Profesor> profesores = new HashMap<>();
+		HashMap<String, Profesor> profesores = new HashMap<>();
 		profesores.put("Pedrito", new Profesor("Pedrito"));
 		profesores.put("Claudia", new Profesor("Claudia"));
 		profesores.put("Eduardo", new Profesor("Eduardo"));
 		
-		HashMap<Curso> cursos = new HashMap<>();
-		cursos.put("A", ew Curso("A"));
-		cursos.put("B", new Curso("B"));
-		cursos.put("C", new Curso("C"));
+		HashMap<String, Curso> cursos = new HashMap<>();
+		cursos.put("A", new Curso("A", 6));
+		cursos.put("B", new Curso("B", 6));
+		cursos.put("C", new Curso("C", 6));
 		
-		HashMap<Materia> materias = new HashMap<>();
-		materias.put("Matemática", new Materia("Matemática"));
+		HashMap<String, Materia> materias = new HashMap<>();
+		materias.put("Matematica", new Materia("Matematica"));
 		materias.put("Lengua", new Materia("Lengua"));
-		materias.put("Biología", new Materia("Biología"));
+		materias.put("Biologia", new Materia("Biologia"));
 		
 		ArrayList<BloqueAsignable> datos = new ArrayList<BloqueAsignable>();
 		/*datos.add(new BloqueAsignable("Pedrito", "A", "Matematica", "2"));
@@ -45,17 +46,17 @@ public class Test {
 		datos.add(new BloqueAsignable("Claudia", "C", "Quimica", "1"));
 		datos.add(new BloqueAsignable("Eduardo", "C", "Sociales", "2"));*/
 		
-		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("A"), materias.get("Matemática"), 2));
-		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("B"), materias.get("Matemática"), 1));
-		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("C"), materias.get("Matemática"), 3));
+		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("A"), materias.get("Matematica"), 2));
+		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("B"), materias.get("Matematica"), 1));
+		datos.add(new BloqueAsignable(profesores.get("Pedrito"), cursos.get("C"), materias.get("Matematica"), 3));
 		
 		datos.add(new BloqueAsignable(profesores.get("Claudia"), cursos.get("A"), materias.get("Lengua"), 2));
 		datos.add(new BloqueAsignable(profesores.get("Claudia"), cursos.get("B"), materias.get("Lengua"), 3));
 		datos.add(new BloqueAsignable(profesores.get("Claudia"), cursos.get("C"), materias.get("Lengua"), 1));
 		
-		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("A"), materias.get("Biología"), 2));
-		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("B"), materias.get("Biología"), 2));
-		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("C"), materias.get("Biología"), 2));
+		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("A"), materias.get("Biologia"), 2));
+		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("B"), materias.get("Biologia"), 2));
+		datos.add(new BloqueAsignable(profesores.get("Eduardo"), cursos.get("C"), materias.get("Biologia"), 2));
 		
 		Escuela escuela = new Escuela(datos);
 		//antes de calcular habria que controlar los datos ingresados
